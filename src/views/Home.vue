@@ -4,26 +4,25 @@
       <div class = 'float-left inline-block bg-green-300 m-2 w-1/2 h-96 overflow-y-auto'> 
          <div v-for = "(item, index) of data" :key = "item.id"> 
               <span> 
-                 <input
-                  type = 'text'
-                  :placeholder = "'Course ' + (index + 1)"
-                   class = 'p-2 m-2 border'
-                  v-model = "item.course"
+                  <input
+                     type = 'text'
+                     :placeholder = "'Course ' + (index + 1)"
+                     class = 'p-2 m-2 border'
+                     v-model = "item.course"
+                     
                   >
                   <input
-                  type = 'number'
-                  placeholder = "Credit Value"
-                   class = 'p-2 m-2 border'
-                  v-model = "item.credits"
+                    type = 'text'
+                    placeholder = "Credit Value"
+                    class = 'p-2 m-2 border'
+                    v-model = "item.credits"
                   >
-                  <select v-model = 'item.type' class = 'p-1 m-1 border' id="cars" name="Enter the Course Type">
-                    <option value = "2">Select Course Type</option>
+                  <select v-model = 'item.type' class = 'p-1 m-1 border' id="type">
                     <option value="ap">AP/Honors</option>
                     <option value="1">Level 1</option>
                     <option value="2">Level 2</option>
                   </select>
-                   <select v-model = 'item.points' class = 'p-1 m-1 border' id="cars" name="Grade">
-                       <option value ="0" >Grade</option>
+                   <select  class = 'p-1 m-1 border' id="cars" value = "Grades" v-model = 'item.points'>
                        <option value="4.33">A+</option>
                        <option value="4.00">A </option>
                        <option value="3.67">A-</option>

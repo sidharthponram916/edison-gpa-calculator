@@ -1,0 +1,33 @@
+<div v-for = "num in 11" :key = 'num'>
+    <span>
+      <input 
+         :class = 'styles.input'
+         placeholder = 'Course'
+      >
+      <select class = 'p-1 m-1 border' id="cars" name="Enter the Course Type">
+         <option value = "">Select Course Type</option>
+         <option value="ap">AP/Honors</option>
+         <option value="1">Level 1</option>
+         <option value="2">Level 2</option>
+      </select>
+       <select class = 'p-1 m-1 border' id="cars" name="Grade">
+         <option value =" " >Grade</option>
+         <option value="4.33">A+</option>
+         <option value="4.00">A </option>
+         <option value="3.67">A-</option>
+         <option value="3.33">B+</option>
+         <option value="3.00">B </option>
+         <option value="2.67">B-</option>
+         <option value="2.33">C+</option>
+         <option value="1.00">C </option>
+         <option value="1.67">C-</option>
+         <option value="1.00">D </option>
+         <option value="0.00">F </option>
+      </select>
+    </span>
+  <br>
+</div>
+    <span>
+       <button class = 'bg-blue-500 p-2 m-2 text-white rounded'>Calculate Unweighted and Weighted GPA</button>
+    </span>       
+</div>

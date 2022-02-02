@@ -1,28 +1,28 @@
 <template>
   <div>
-      <div class = 'bg-blue-900 text-4xl text-white  w-fullfont-bold m-2 text-left p-2'><b>GPA Calculator</b>:  Edison GPA System</div>
-      <div class = 'float-left inline-block bg-green-300 m-2 w-1/2 h-96 overflow-y-auto'> 
+      <div class = 'bg-blue-900 border-4 border-red-700 text-4xl text-white  w-full font-bold text-left p-2'><b>GPA Calculator</b>:  Edison GPA System</div>
+      <div class = 'float-left inline-block bg-blue-300  border-4 border-black m-2 w-1/2 h-96 overflow-y-auto'> 
          <div v-for = "(item, index) of data" :key = "item.id"> 
               <span> 
                   <input
                      type = 'text'
                      :placeholder = "'Course ' + (index + 1)"
-                     class = 'p-2 m-2 border'
+                     class = 'p-2 m-2 border-2 border-black'
                      v-model = "item.course"
                      
                   >
                   <input
                     type = 'text'
                     placeholder = "Credit Value"
-                    class = 'p-2 m-2 border'
+                    class = 'p-2 m-2 border-2 border-black'
                     v-model = "item.credits"
                   >
-                  <select v-model = 'item.type' class = 'p-1 m-1 border' id="type">
+                  <select v-model = 'item.type' class = 'p-1 m-1 border-2 border-black' id="type">
                     <option value="ap">AP/Honors</option>
                     <option value="1">Level 1</option>
                     <option value="2">Level 2</option>
                   </select>
-                   <select  class = 'p-1 m-1 border' id="cars" value = "Grades" v-model = 'item.points'>
+                   <select  class = 'p-1 m-1 border-2 border-black' id="cars" value = "Grades" v-model = 'item.points'>
                        <option value="4.33">A+</option>
                        <option value="4.00">A </option>
                        <option value="3.67">A-</option>
@@ -47,11 +47,10 @@
                <b>Status</b> <br><h1> <h1 :class = 'color' class = 'font-bold text-6xl'> {{ this.status }}  </h1></h1>
           </div>
       </div>
-      <br>
-         <div class = 'bg-green-400 m-2 w-1/2'> 
-              <button @click = 'calculate()' class = 'p-2 m-2 bg-blue-500 text-white'><b>Calculate</b></button>
-              <button @click = 'addCourse()' class = 'p-2 m-2 bg-green-500 text-white'><b>Add Course</b></button>
-              <button @click = 'removeCourse()' class = 'p-2 m-2 bg-red-500 text-white'><b>Remove Course</b></button>
+         <div class = 'bg-indigo-900 border-4 border-white m-2 w-1/2'> 
+              <button @click = 'calculate()' class = 'rounded p-2 m-2 bg-yellow-600 text-white'><b>Calculate</b></button>
+              <button @click = 'addCourse()' class = 'rounded p-2 m-2 bg-green-600 text-white'><b>Add Course</b></button>
+              <button @click = 'removeCourse()' class = 'rounded p-2 m-2 bg-red-500 text-white'><b>Remove Course</b></button>
           </div>
       <br> 
       <div> 
@@ -146,15 +145,15 @@ export default {
                   }
               this.weighted = (weightedPoints /credits); 
               if (this.unweighted > 4.00) { 
-                  this.status = "Excellent";
+                  this.status = "Excellent 😊";
                   this.color = 'text-green-600'
               }
               else if (this.unweighted >= 3.65) { 
-                  this.status = "Good";
+                  this.status = "Good 🙂";
                   this.color = 'text-green-400'
               }
               else if (this.unweighted >= 3.00) { 
-                  this.status = "OK";
+                  this.status = "OK 😐";
                   this.color = 'text-yellow-600'
               }
               else if (this.unweighted >= 2.00) { 

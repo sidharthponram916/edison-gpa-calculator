@@ -69,49 +69,49 @@ export default {
                { 
                   course: "", 
                   id: Math.random(),
-                  credits: 0,
+                  credits: "",
                   type: "", 
                   points: ""
                },
                { 
                   course: "", 
                   id: Math.random(),
-                  credits: 0,
+                  credits: "",
                   type: "", 
                   points: ""
                },
                { 
                   course: "", 
                   id: Math.random(),
-                  credits: 0,
+                  credits: "",
                   type: "", 
                   points: ""
                },
                { 
                   course: "", 
                   id: Math.random(),
-                  credits: 0,
+                  credits: "",
                   type: "", 
                   points: ""
                }
                ,{ 
                   course: "", 
                   id: Math.random(),
-                  credits: 0,
+                  credits: "",
                   type: "", 
                   points: ""
                },
                { 
                   course: "", 
                   id: Math.random(),
-                  credits: 0,
+                  credits: "",
                   type: "", 
                   points: ""
                },
                { 
                   course: "", 
                   id: Math.random(),
-                  credits: 0,
+                  credits: "",
                   type: "", 
                   points: ""
                },
@@ -128,12 +128,9 @@ export default {
             let totalPoints = 0; 
             let credits = 0; 
                    for (let course of this.data) { 
-
                          totalPoints = totalPoints + (parseFloat(course.credits) * parseFloat(course.points)); 
                          credits += parseFloat(course.credits); 
-
                    }
-
               this.unweighted = (totalPoints/credits); 
         // Weighted  
           let weightedPoints = 0; 
@@ -149,7 +146,6 @@ export default {
                         }
                   }
               this.weighted = (weightedPoints /credits); 
-
               if (this.unweighted > 4.00) { 
                   this.status = "Excellent";
                   this.color = 'text-green-600'
@@ -170,7 +166,6 @@ export default {
                   this.status = "Failing";
                   this.color = 'text-red-500'
               }
-
           
           }, 
           addCourse() { 
@@ -190,5 +185,4 @@ export default {
 </script>
 
 <style>
-
 </style>
